@@ -2,9 +2,18 @@
     padding: 0;
 }
 
+.header-container {
+    background-color: #f7faff;
+}
+
 .header {
     padding: 60px 0 45px 0;    
 } 
+
+.header .logo img {
+    position: absolute;
+    top: -40px;
+}
 
 .menu-link-item {
     text-align: center;
@@ -82,6 +91,12 @@
     transform: rotate(180deg);
 }
 
+.header-wave-separator img {
+    width: 100%;
+    position: relative;
+    bottom: -10px;
+}
+
 .slider-container {
     padding: 35px 0 70px 0;
 }
@@ -136,6 +151,10 @@
     float: right;
 }
 
+.portfolio-container {
+    margin-bottom: 90px;
+}
+
 .portfolio-title-container {
     text-align: center;
     margin-bottom: 30px;
@@ -183,4 +202,9 @@
     font-style: normal;
     font-stretch: normal;
     color: #4e6a84;
+    margin-top: 15px;
+}
+
+.portfolio-wave-separator img {
+    width: 100%;
 }

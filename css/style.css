@@ -23,6 +23,7 @@ a.menu-link-item {
 
 .menu-link-item:hover {
     cursor: pointer;
+    border: none;
 }
 
 .link-icon {

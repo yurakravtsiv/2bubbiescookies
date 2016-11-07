@@ -11,13 +11,24 @@ $(function () {
         $( this ).addClass('current');
       });
     
+    $( ".portfolio-item" )
+      .mouseover(function() {
+        $( this ).find('.item-title-text').hide();
+        $( this ).find('.button').show();
+      })
+      .mouseout(function() {
+        $( this ).find('.button').hide();
+        $( this ).find('.item-title-text').show();
+      });
+    
     $(document).ready(function(){
       $('.slider').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000
+        autoplaySpeed: 5000
       });
     });
 });
+

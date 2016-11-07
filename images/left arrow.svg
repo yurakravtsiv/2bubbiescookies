@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>fast-forward-button-outline copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 35.82 36 35.82 36 0 0 0"></polygon>
+    </defs>
+    <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-3.2." transform="translate(-104.000000, -425.000000)">
+            <g id="sugar-cookies-decorated-royal-icing-sheep-lambs-baby-shower-frederick-md-maryland-copy" transform="translate(0.000000, 194.000000)">
+                <g id="fast-forward-button-outline-copy" transform="translate(122.000000, 249.000000) scale(-1, 1) translate(-122.000000, -249.000000) translate(104.000000, 231.000000)">
+                    <g id="Group-3">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M18,0 C8.064,0 0,8.064 0,18 C0,27.936 8.064,36 18,36 C27.936,36 36,27.936 36,18 C36,8.064 27.936,0 18,0 L18,0 Z M18,33.597 C9.399,33.597 2.403,26.601 2.403,18 C2.403,9.399 9.399,2.403 18,2.403 C26.601,2.403 33.597,9.399 33.597,18 C33.597,26.601 26.601,33.597 18,33.597 L18,33.597 Z" id="Fill-1" fill="#76BDDD" opacity="0.799498601" mask="url(#mask-2)"></path>
+                    </g>
+                    <path d="M20.145,9.141 C19.677,8.673 18.915,8.673 18.444,9.141 C17.964,9.621 17.964,10.383 18.444,10.851 L24.798,18.048 L18.444,25.23 C17.964,25.698 17.964,26.472 18.444,26.94 C18.915,27.411 19.677,27.411 20.145,26.94 L27.246,18.915 C27.492,18.669 27.597,18.363 27.597,18.048 C27.597,17.73 27.492,17.415 27.246,17.181 L20.145,9.141 Z" id="Fill-4" fill="#76BDDD" opacity="0.799498601"></path>
+                    <path d="M18.996,18.048 C18.996,17.73 18.879,17.415 18.645,17.181 L11.544,9.141 C11.073,8.673 10.302,8.673 9.831,9.141 C9.363,9.621 9.363,10.383 9.831,10.851 L16.194,18.048 L9.831,25.23 C9.363,25.698 9.363,26.472 9.831,26.94 C10.302,27.411 11.073,27.411 11.544,26.94 L18.645,18.915 C18.879,18.681 18.996,18.363 18.996,18.048 L18.996,18.048 Z" id="Fill-5" fill="#76BDDD" opacity="0.799498601"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

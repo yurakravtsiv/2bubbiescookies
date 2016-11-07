@@ -151,6 +151,10 @@
     float: right;
 }
 
+.slide-order-btn:hover {
+    cursor: pointer;
+}
+
 .portfolio-container {
     margin-bottom: 90px;
 }
@@ -189,6 +193,25 @@
     text-align: center;
 }
 
+.portfolio-item .item-title .button {
+    font-family: 'Delius', cursive;
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: center;
+    color: #ffffff;
+    background-color: #76bddd;
+    text-transform: uppercase;
+    padding: 5px 0;
+    width: 100%;
+    margin-top: 15px;
+    display: none;
+}
+
+.portfolio-item .item-title .button:hover {
+    cursor: pointer;
+}
 
 .portfolio-item .item-title-text {
     display: inline-block;
@@ -203,4 +226,54 @@
 
 .portfolio-wave-separator img {
     width: 100%;
+    position: relative;
+    top: 10px;
+}
+
+.footer-container {
+    background-color: #f7faff;
+    padding: 50px 0;
+}
+
+.footer-item-title {
+    background: url(../images/footer%20ribbon.svg);
+    height: 35px;
+    text-align: center;
+    max-width: 195px;
+    font-family: 'Delius', cursive;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    color: #ffffff;
+    line-height: 35px;
+    margin-bottom: 25px;
+}
+
+.contact-us-item,
+.about-cookies-item {
+    margin-bottom: 10px;
+}
+
+.contact-us-item-logo,
+.about-cookies-item-logo {
+    margin-right: 5px;
+}
+
+.contact-us-item-text,
+.about-cookies-item-text { 
+    font-family: 'Delius', cursive;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    color: #1e3245;
+}
+
+.follow-us-items img {
+    margin-right: 20px;
+}
+
+.follow-us-items img:hover {
+    cursor: pointer;
 }

@@ -15,7 +15,9 @@
     top: -40px;
 }
 
-.menu-link-item {
+a.menu-link-item {
+    display: block;
+    text-decoration: none;
     text-align: center;
 }
 

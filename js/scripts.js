@@ -14,10 +14,12 @@ $(function () {
     $( ".portfolio-item" )
       .mouseover(function() {
         $( this ).find('.item-title-text').hide();
+        $( this ).find('.item-title img').hide();
         $( this ).find('.button').show();
       })
       .mouseout(function() {
         $( this ).find('.button').hide();
+        $( this ).find('.item-title img').show();
         $( this ).find('.item-title-text').show();
       });
     
@@ -29,6 +31,16 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 5000
       });
+        
+        function setSlickArrowPos() {
+            var sliderHeight = $( '.slider' ).height() / 2 + 'px';
+            $( '.slick-arrow' ).css('top', sliderHeight);    
+        }
+        setSlickArrowPos();
+        $( window ).resize(function() {
+          setSlickArrowPos();
+        });
     });
+    
 });
 

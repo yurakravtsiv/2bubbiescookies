@@ -108,14 +108,32 @@ a.menu-link-item {
     outline: none;
 }
 
-.slick-next.slick-arrow {
+.slick-arrow {
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    font-size: 0;
     position: absolute;
-    top: 0;
-    right: 0;
 }
 
-.slick-arrow {
-    display: none !important;
+.slick-arrow:focus {
+    outline: none;
+}
+
+.slick-prev.slick-arrow {
+    left: -40px;
+    background: url(../images/left%20arrow.svg);
+}
+
+.slick-next.slick-arrow {
+    right: -40px;
+    background: url(../images/right%20arrow.svg);
+}
+
+.slide img {
+    width: 100%;
 }
 
 .slide-title {
@@ -172,6 +190,35 @@ a.menu-link-item {
 .portfolio-title-container {
     text-align: center;
     margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.portfolio-title-container img,
+.testimonials-title img,
+.about-li-title img {
+    width: 40%;
+    position: relative;
+    top: 20px;
+}
+
+.about-li-title img {
+    width: 29%;
+}
+
+.about-li-title.me img {
+    width: 40%;
+}
+
+.portfolio-title-container img.left,
+.testimonials-title img.left,
+.about-li-title img.left {
+    float: left;
+}
+
+.portfolio-title-container img.right,
+.testimonials-title img.right,
+.about-li-title img.right {
+    float: right;
 }
 
 .portfolio-title-container .title-text,
@@ -233,6 +280,20 @@ a.menu-link-item {
 
 .portfolio-item .item-title .button:hover {
     cursor: pointer;
+}
+
+.portfolio-item .item-title img {
+    position: relative;
+    top: 27px;
+    width: 21%;
+}
+
+.portfolio-item .item-title img.left {
+    float: left;
+}
+
+.portfolio-item .item-title img.right {
+    float: right;
 }
 
 .portfolio-item .item-title-text {
@@ -304,6 +365,7 @@ a.menu-link-item {
 .main-about-container ul {
     list-style-type: none;
     margin-top: 40px;
+    padding-left: 0;
 }
 
 .main-about-container ul li {
@@ -342,6 +404,7 @@ a.menu-link-item {
 /*************************** TESTIMONIALS ****************************/
 .main-testimonials-container ul {
     list-style-type: none;
+    padding-left: 0;
 }
 
 .main-testimonials-container ul li {

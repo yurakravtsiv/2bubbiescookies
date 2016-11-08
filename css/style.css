@@ -98,7 +98,7 @@ a.menu-link-item {
 .header-wave-separator img {
     width: 100%;
     position: relative;
-    bottom: -10px;
+    bottom: -30px;
 }
 
 .slider-container {
@@ -477,6 +477,10 @@ a.menu-link-item {
         bottom: 5px;
     }
     
+    .header-wave-separator img {
+        bottom: -10px;
+    }
+    
     .slider-container {
         padding-top: 0;
     }
@@ -493,6 +497,10 @@ a.menu-link-item {
     .testimonials-title img, 
     .about-li-title img {
         width: 20%;
+    }
+    
+    .portfolio-item .item-title img {
+        top: 22px;
     }
     
     .portfolio-container {

@@ -99,7 +99,7 @@ a.menu-link-item {
 .header-wave-separator img {
     width: 100%;
     position: relative;
-    bottom: -30px;
+    bottom: -40px;
 }
 
 .slider-container {
@@ -577,6 +577,9 @@ form .footer {
     .portfolio-item .item-title img {
         top: 31px;
         width: 14%;
+    }
+    .header-wave-separator img {
+        bottom: -30px;
     }
 }
 

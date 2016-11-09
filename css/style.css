@@ -575,6 +575,7 @@ form .footer {
     }
     
     .portfolio-item .item-title img {
+        top: 31px;
         width: 14%;
     }
 }
@@ -670,6 +671,7 @@ form .footer {
     }
     
     .portfolio-item .item-title img {
+        width: 21%;
         top: 25px;
     }
     
@@ -699,16 +701,24 @@ form .footer {
         margin: 15px 0 10px 0;
     }
     
-    .portfolio-item .item-title img {
-        width: 21%;
+    .about-li-title {
+        margin-bottom: 10px;
     }
     
-    .about-li-title {
-        margin-bottom: 20px;
+    .about-li-img {
+        margin-bottom: 10px;
     }
     
     .about-li-text {
         padding-left: 0;
+    }
+    
+    .main-about-container ul {
+        margin-top: 10px;
+    }
+    
+    .main-about-container ul li {
+        padding: 10px;
     }
     
     .main-about-container ul li.last {
@@ -719,13 +729,17 @@ form .footer {
         margin: 20px 0;
     }
     
+    .main-testimonials-container ul li.last {
+        margin-bottom: 20px;
+    }
+    
     .testimonials-title img {
         width: 16%;
     }
     
     .testimonials-title {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     
     .testimonial-item-data-wrapper {
@@ -735,7 +749,8 @@ form .footer {
     .testimonial-item-photo {
         display: block;
         text-align: center;
-        margin-bottom: 0;
+        margin-bottom: 10px;
+        margin-right: 0;
     }
     
     .testimonial-item-name span {

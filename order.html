@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Testimonials</title>
+    <title>Order</title>
     <link rel="shortcut icon" type="image/png" href="images/2%20Bubbies%20cookies-1%20(no_bgr).png"/>
     
     <link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet">
+    
     <link href="css/style.css" rel="stylesheet">
     
 </head>
@@ -56,7 +57,7 @@
                                     <img src="images/home,about,order_wave.svg" alt="">
                                 </div>
                             </a>
-                            <a href="testimonials.html" class="col-sm-4 menu-link-item p-0 current">
+                            <a href="testimonials.html" class="col-sm-4 menu-link-item p-0">
                                 <div class="link-icon">
                                     <img class="inactive" src="images/testimonials_inactive.svg" alt="">
                                     <img class="active" src="images/testimonials_active.svg" alt="">
@@ -91,7 +92,7 @@
                                     <img src="images/corporate_wave.svg" alt="">
                                 </div>
                             </a>
-                            <a href="order.html" class="col-sm-4 menu-link-item">
+                            <a href="order.html" class="col-sm-4 menu-link-item current">
                                 <div class="link-icon">
                                     <img class="inactive" src="images/order_inactive.svg" alt="">
                                     <img class="active" src="images/order_active.svg" alt="">
@@ -113,80 +114,54 @@
                 <img src="images/blue%20wave.png" alt="">
             </div>
         </div>
-        <div class="row main-testimonials-container">
-            <div class="col-sm-10 col-sm-offset-1">
-                <div class="testimonials-title">
-                <img class="left" src="images/Title_border_left.svg" alt="">
-                Testimonials
-                <img class="right" src="images/Title_border_right.svg" alt=""></div>
-                <ul>
-                    <li>
-                        <div class="row quote-container">
-                            <img class="quote-top" src="images/quote1.svg" alt="">
-                            <div class="col-sm-10 col-sm-offset-1">
-                                <div class="testimonial-item-header">
-                                    
-                                    <div class="testimonial-item-photo">
-                                        <img src="images/ava1.png" alt="">
-                                    </div>
-                                    <div class="testimonial-item-name">
-                                        <span>Silvana T.</span>
-                                        <br>
-                                        <span>“The cookies were a huge hit”</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial-item-text">
-                                    Cheryl, Very happy with everything. The cookies were a huge hit (especially with the teachers!) Veda had a great birthday and she told me bringing in cookies made her feel extra special in class. They tasted awesome, and will definitely keep you information for future cookies. I'll also pass along your info to friends who loved my idea &amp; your cookies! Thanks!
-                                </div>
-                            </div>
-                            <img class="quote-bottom" src="images/quote2.svg" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row quote-container">
-                            <img class="quote-top" src="images/quote1.svg" alt="">
-                            <div class="col-sm-10 col-sm-offset-1">
-                                <div class="testimonial-item-header">
-                                    
-                                    <div class="testimonial-item-photo">
-                                        <img src="images/ava2.png" alt="">
-                                    </div>
-                                    <div class="testimonial-item-name">
-                                        <span>Lynda V.</span>
-                                        <br>
-                                        <span>“Best cookies ever”</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial-item-text">
-                                    Just wanted to thank you for the "40"cookies you created for my sister’s 40th Birthday Party. They were a hit. Everyone loved them especially my sister! Thank you again!
-                                </div>
-                            </div>
-                            <img class="quote-bottom" src="images/quote2.svg" alt="">
-                        </div>
-                    </li>
-                    <li class="last">
-                        <div class="row quote-container">
-                            <img class="quote-top" src="images/quote1.svg" alt="">
-                            <div class="col-sm-10 col-sm-offset-1">
-                                <div class="testimonial-item-header">
-                                    
-                                    <div class="testimonial-item-photo">
-                                        <img src="images/ava3.png" alt="">
-                                    </div>
-                                    <div class="testimonial-item-name">
-                                        <span>Silvana T.</span>
-                                        <br>
-                                        <span>“The cookies were a huge hit”</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial-item-text">
-                                    Cheryl, Very happy with everything. The cookies were a huge hit (especially with the teachers!) Veda had a great birthday and she told me bringing in cookies made her feel extra special in class. They tasted awesome, and will definitely keep you information for future cookies. I'll also pass along your info to friends who loved my idea &amp; your cookies! Thanks!
-                                </div>
-                            </div>
-                            <img class="quote-bottom" src="images/quote2.svg" alt="">
-                        </div>
-                    </li>
-                </ul>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="form">
+                    <div class="form-title">
+                        Order form
+                    </div>
+                    <form>
+                      <div class="body">
+                          <div class="inputLabel first">First and Last name</div>
+                          <input type="text" id="firstLastName" name="firstLastName" placeholder="First and Last name">
+                          <div class="inputLabel">Phone number</div>
+                          <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone number">
+                          <div class="inputLabel">Email</div>
+                          <input type="email" id="email" name="email" placeholder="Email">
+                          <div class="inputLabel">Cookie Design</div>
+                          <input type="text" id="cookieDesign" name="cookieDesign" placeholder="Cookie Design">
+                          <div class="inputLabel">Quantity</div>
+                          <input type="number" id="quantity" name="quantity" placeholder="Quantity" min="1">
+                          <div class="inputLabel">Message on sticker</div>
+                          <input type="text" id="messageOnSticker" name="messageOnSticker" placeholder="Message on sticker">
+                          <div class="row date-container">
+                              <div class="col-sm-6">
+                                  <div class="inputLabel">Order date</div>
+                                  <input type="date" class="no-spin" id="orderDate" name="orderDate" readonly>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="inputLabel">Date needed</div>
+                                  <input type="date" class="no-spin" id="dateNeeded" name="dateNeeded" placeholder="Date">
+                              </div>
+                          </div>
+                          <div class="inputLabel">Shipping Address</div>
+                          <textarea type="text" id="shippingAddress" name="shippingAddress" placeholder="Address"></textarea>
+                          <div class="inputLabel fileInputLabel">JPEG image if applicable</div>
+					      <input type="file" id="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+					      <label for="file"><span class="fileName">Browse...</span></label>
+                      </div>
+                      <div class="footer">
+                          <div class="row form-btns-container">
+                              <div class="col-sm-6">
+                                  <input type="reset" value="Cancel">
+                              </div>
+                              <div class="col-sm-6">
+                                  <input type="submit" value="Send">
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -243,6 +218,7 @@
     <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js"   integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="   crossorigin="anonymous" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" defer></script>
+    <script src="js/custom-file-input.js" defer></script>
     <script src="js/scripts.js" defer></script>
 </body>
 

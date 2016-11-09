@@ -44,8 +44,11 @@ $(function () {
     
     $( "#orderDate" ).val(todayDate());
     
-    $( "input:reset" ).click(function() {
-         $( ".fileName" ).text('Browse...');
+    $( "#cancelBtn" ).click(function(e) {
+        e.preventDefault();
+        $( "input:not(:submit)" ).val('');
+        $( ".fileName" ).text('Browse...');
+        $( "#orderDate" ).val(todayDate());
     });
      
     $( "input:submit" ).click(function() {

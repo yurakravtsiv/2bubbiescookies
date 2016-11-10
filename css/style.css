@@ -17,6 +17,7 @@ nav>.container-fluid {
 .header .logo img {
     position: absolute;
     top: -40px;
+    width: 100%;
 }
 
 a.menu-link-item {
@@ -303,6 +304,10 @@ a.menu-link-item {
     width: 100%;
     position: relative;
     top: 10px;
+}
+
+.footer-wrapper {
+    background-color: #f7faff;
 }
 
 .footer-container {

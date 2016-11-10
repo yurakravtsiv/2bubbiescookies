@@ -195,13 +195,15 @@ a.slide-order-btn:hover {
 
 .portfolio-title-container img,
 .testimonials-title img,
+.portfolio-title img,
 .about-li-title img {
     width: 40%;
     position: relative;
     top: 20px;
 }
 
-.testimonials-title img {
+.testimonials-title img,
+ {
     width: 35%;
 }
 
@@ -215,12 +217,14 @@ a.slide-order-btn:hover {
 
 .portfolio-title-container img.left,
 .testimonials-title img.left,
+.portfolio-title img.left,
 .about-li-title img.left {
     float: left;
 }
 
 .portfolio-title-container img.right,
 .testimonials-title img.right,
+.portfolio-title img.right,
 .about-li-title img.right {
     float: right;
 }
@@ -228,7 +232,8 @@ a.slide-order-btn:hover {
 .portfolio-title-container .title-text,
 .about-li-title,
 .testimonials-title,
-.form-title {
+.form-title,
+.portfolio-title {
     font-family: 'Schoolbell', cursive;
     font-size: 36px;
     color: #76bddd;
@@ -239,7 +244,8 @@ a.slide-order-btn:hover {
     margin-bottom: 45px;
 }
 
-.testimonials-title {
+.testimonials-title,
+.portfolio-title {
     margin-top: 70px;
     margin-bottom: 40px;
 }
@@ -267,7 +273,8 @@ a.slide-order-btn:hover {
     text-align: center;
 }
 
-.portfolio-item .item-title .button {
+.portfolio-item .item-title .button,
+.portfolio-card .footer .button {
     display: block;
     font-family: 'Delius', cursive;
     font-size: 17px;
@@ -281,7 +288,12 @@ a.slide-order-btn:hover {
     display: none;
 }
 
-.portfolio-item .item-title .button:hover {
+.portfolio-card .footer .button {
+    margin: -3px 0;
+}
+
+.portfolio-item .item-title .button:hover,
+.portfolio-card .footer .button:hover {
     cursor: pointer;
     text-decoration: none;
 }
@@ -461,6 +473,88 @@ a.slide-order-btn:hover {
     display: none;
 }
 
+/************************** PORTFOLIO *****************************/
+
+.main-portfolio-container {
+    margin-bottom: 90px;
+}
+
+.portfolio-menu {
+    border: solid 7px #9bd9f5;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 25px 10px 15px;
+}
+
+.portfolio-menu li {
+    font-family: 'Delius', cursive;
+    font-size: 24px;
+    color: #1e3245;
+    padding: 8px 15px;
+    border-bottom: dashed 2px #f0f0f0;
+}
+
+.portfolio-menu li.last {
+    border: none;
+}
+
+.portfolio-menu li:hover {
+    cursor: pointer;
+    background: url(../images/menu-item-ribbon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.portfolio-menu li.current {
+    background: url(../images/menu-item-ribbon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.main-portfolio-container .portfolio-card {
+    border-radius: 7px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.24);
+    margin-bottom: 30px;
+}
+
+.main-portfolio-container .portfolio-card .header {
+    font-family: 'Delius', cursive;
+    font-size: 14px;
+    text-align: center;
+    color: #4e6a84;
+    padding: 15px 35px 7px 35px;
+    border-bottom: solid 1px rgba(30, 50, 69, 0.1); 
+}
+
+.main-portfolio-container .portfolio-card .body {
+    padding: 5px 8px 0 8px;
+    border-bottom: solid 1px rgba(30, 50, 69, 0.1);
+}
+
+.main-portfolio-container .portfolio-card .body img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.main-portfolio-container .portfolio-card .body .text {
+    display: inline-block;
+    font-family: 'Delius', cursive;
+    font-size: 12px;
+    color: rgba(30, 50, 69, 0.57);
+    padding: 15px 0;
+}
+
+.main-portfolio-container .portfolio-card .footer {
+    padding: 14px 8px;
+    font-family: 'Delius', cursive;
+    font-size: 20px;
+    text-align: right;
+    color: #1e3245;
+}
+
 /************************** ORDER *****************************/
 
 .form {
@@ -624,8 +718,13 @@ form .footer {
         width: 15%;
     }
     
-    .testimonials-title img {
+    .testimonials-title img,
+    .portfolio-title img{
         width: 25%;
+    }
+    
+    .portfolio-menu li {
+        text-align: center;
     }
 }
 
@@ -688,6 +787,7 @@ form .footer {
     
     .portfolio-title-container img, 
     .testimonials-title img, 
+    .portfolio-title img,
     .about-li-title img {
         width: 20%;
     }
@@ -772,7 +872,8 @@ form .footer {
         margin-bottom: 20px;
     }
     
-    .testimonials-title img {
+    .testimonials-title img,
+    .portfolio-title img {
         width: 16%;
     }
     

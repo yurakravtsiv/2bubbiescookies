@@ -11,20 +11,30 @@ $(function () {
         $( this ).addClass('current');
       });
     
-    $( ".portfolio-item" )
+//    $( ".portfolio-item" )
+//      .mouseover(function() {
+//        $( this ).find('.item-title-text').hide();
+//        $( this ).find('.item-title img').hide();
+//        $( this ).find('.button').show();
+//      })
+//      .mouseout(function() {
+//        $( this ).find('.button').hide();
+//        $( this ).find('.item-title img').show();
+//        $( this ).find('.item-title-text').show();
+//      });
+    
+    $( ".portfolio-card" )
       .mouseover(function() {
-        $( this ).find('.item-title-text').hide();
-        $( this ).find('.item-title img').hide();
+        $( this ).find('.price').hide();
         $( this ).find('.button').show();
       })
       .mouseout(function() {
         $( this ).find('.button').hide();
-        $( this ).find('.item-title img').show();
-        $( this ).find('.item-title-text').show();
+        $( this ).find('.price').show();
       });
 
-    $( ".portfolio-item .button" ).click(function() {
-        var cookieDesign = $( this ).siblings('.item-title-text').text();
+    $( ".portfolio-card .button" ).click(function() {
+        var cookieDesign = $( this ).parent().siblings('.header').text();
         localStorage.setItem("cookieDesign", cookieDesign);
         window.location.href = 'order.html';
       });
@@ -47,6 +57,12 @@ $(function () {
           setSlickArrowPos();
         });
     });
+    
+    $( ".portfolio-menu li" )
+      .click(function() {
+        $( this ).parent().find('.current').removeClass('current');
+        $( this ).addClass('current');
+      });
     
     $( "#cookieDesign" ).val(localStorage.getItem("cookieDesign"));
     

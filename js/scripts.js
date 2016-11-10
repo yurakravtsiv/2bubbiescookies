@@ -68,6 +68,10 @@ $(function () {
     
     $( "#orderDate" ).val(todayDate());
     
+    $( ".menu-link-item" ).click(function() {
+        localStorage.removeItem("cookieDesign");
+    });
+    
     $( "#cancelBtn" ).click(function(e) {
         e.preventDefault();
         $( "input:not(:submit)" ).val('');

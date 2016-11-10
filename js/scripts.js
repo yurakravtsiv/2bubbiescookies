@@ -22,6 +22,12 @@ $(function () {
         $( this ).find('.item-title img').show();
         $( this ).find('.item-title-text').show();
       });
+
+    $( ".portfolio-item .button" ).click(function() {
+        var cookieDesign = $( this ).siblings('.item-title-text').text();
+        localStorage.setItem("cookieDesign", cookieDesign);
+        window.location.href = 'order.html';
+      });
     
     $(document).ready(function(){
       $('.slider').slick({
@@ -42,6 +48,8 @@ $(function () {
         });
     });
     
+    $( "#cookieDesign" ).val(localStorage.getItem("cookieDesign"));
+    
     $( "#orderDate" ).val(todayDate());
     
     $( "#cancelBtn" ).click(function(e) {
@@ -49,6 +57,7 @@ $(function () {
         $( "input:not(:submit)" ).val('');
         $( ".fileName" ).text('Browse...');
         $( "#orderDate" ).val(todayDate());
+        localStorage.removeItem("cookieDesign");
     });
      
     $( "input:submit" ).click(function() {

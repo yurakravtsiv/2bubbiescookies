@@ -20,6 +20,10 @@ nav>.container-fluid {
     width: 100%;
 }
 
+.menu-links {
+    padding: 0;
+}
+
 a.menu-link-item {
     display: block;
     text-decoration: none;
@@ -161,7 +165,7 @@ a.menu-link-item {
     margin-bottom: 0;
 }
 
-.slide-order-btn {
+a.slide-order-btn {
     display: inline-block;
     font-family: 'Delius', cursive;
     font-size: 18px;
@@ -171,10 +175,12 @@ a.menu-link-item {
     text-transform: uppercase;
     padding: 10px 40px;
     float: right;
+    text-decoration: none;
 }
 
-.slide-order-btn:hover {
+a.slide-order-btn:hover {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .portfolio-container {
@@ -262,6 +268,7 @@ a.menu-link-item {
 }
 
 .portfolio-item .item-title .button {
+    display: block;
     font-family: 'Delius', cursive;
     font-size: 17px;
     text-align: center;
@@ -276,6 +283,7 @@ a.menu-link-item {
 
 .portfolio-item .item-title .button:hover {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .portfolio-item .item-title img {
@@ -306,7 +314,8 @@ a.menu-link-item {
     top: 10px;
 }
 
-.footer-wrapper {
+.footer-wrapper,
+.navbar-default{
     background-color: #f7faff;
 }
 
@@ -345,7 +354,7 @@ a.menu-link-item {
 }
 
 .follow-us-items img {
-    margin-right: 20px;
+    margin-right: 19px;
 }
 
 .follow-us-items img:hover {
@@ -711,6 +720,10 @@ form .footer {
     
     .footer-container {
         padding: 20px 0;
+    }
+    
+    .footer a img {
+        width: 120px;
     }
     
     .footer {

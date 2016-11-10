@@ -24,7 +24,7 @@ a.menu-link-item {
     display: block;
     text-decoration: none;
     text-align: center;
-    padding: 0;
+/*    padding: 0;*/
 }
 
 .menu-link-item:hover {

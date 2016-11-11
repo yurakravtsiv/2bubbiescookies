@@ -571,6 +571,7 @@ form .footer {
     padding: 40px 60px 45px 60px;
     margin-top: 45px;
     border-top: solid 1px rgba(30, 50, 69, 0.15);
+    position: relative;
 }
 
 .form .inputLabel {
@@ -684,7 +685,10 @@ form .footer {
 #msg {
     padding: 0 15px;
     color: #76bddd;
-    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 /************************** MEDIA QUERIES *****************************/
@@ -949,16 +953,6 @@ form .footer {
     .main-testimonials-container ul {
         padding-left: 0;
     }
-    
-/*
-    nav {
-        position: fixed !important;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-    }
-*/
 }
 
 @media screen and (max-width: 500px) {

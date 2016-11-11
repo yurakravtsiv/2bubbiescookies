@@ -74,7 +74,8 @@ $(function () {
     
     $( "#cancelBtn" ).click(function(e) {
         e.preventDefault();
-        $( "input:not(:submit)" ).val('');
+        $( "input" ).val('');
+        $( "textarea" ).val('');
         $( ".fileName" ).text('Browse...');
         $( "#orderDate" ).val(todayDate());
         localStorage.removeItem("cookieDesign");

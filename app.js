@@ -37,39 +37,47 @@ nodemailer.mail({
           +"<b>Order date: </b>"+req.body.orderDate+"<br>"
           +"<b>Date needed: </b>"+req.body.dateNeeded+"<br>"
           +"<b>Shipping Address: </b>"+req.body.shippingAddress+"<br>"
-    // ,attachments:[
-    //   {
-    //     streamSource: fs.createReadStream(req.files.file.path)
-    //   }
-    // ]
+//     ,attachments:[
+//       {
+//         streamSource: fs.createReadStream(req.files.file.path)
+//       }
+//     ]
 });
 res.send("Email has been sent successfully");
  
    // Sending Emails with SMTP, Configuring SMTP settings
  
-    // var smtpTransport = nodemailer.createTransport("SMTP",{
-    //          host: "smtp.gmail.com", // hostname
-    // secureConnection: true, // use SSL
-    // port: 465, // port for secure SMTP
-    //         auth: {
-    //              user: "2bubbiescookies.sender@gmail.com",
-    //              pass: "['2bubbiescookies']"
-    //         }
-    //     });
-    //     var mailOptions = {
-    //         from: "2bubbiescookies ✔ <2bubbiescookies.sender@gmail.com>", // sender address
-    //         to: "yura.kravtsiv@gmail.com", // list of receivers
-    //         subject: "Order ✔", // Subject line
-    //         //text: "Hello world ✔", // plaintext body
-    //         html: "<b>"+req.body.description+"</b>" // html body
-    //     }
-    //     smtpTransport.sendMail(mailOptions, function(error, response){
-    //     if(error){
-    //          res.send("Email could not sent due to error: "+error);
-    //     }else{
-    //          res.send("Email has been sent successfully");
-    //     } 
-    // }); 
+//     var smtpTransport = nodemailer.createTransport("SMTP",{
+//              host: "smtp.gmail.com", // hostname
+//     secureConnection: true, // use SSL
+//     port: 465, // port for secure SMTP
+//             auth: {
+//                  user: "2bubbiescookies.sender@gmail.com",
+//                  pass: "['2bubbiescookies']"
+//             }
+//         });
+//         var mailOptions = {
+//             from: "2bubbiescookies ✔ <2bubbiescookies.sender@gmail.com>", // sender address
+//             to: "yura.kravtsiv@gmail.com", // list of receivers
+//             subject: "Order ✔", // Subject line
+//             //text: "Hello world ✔", // plaintext body
+//             html: "<b>First and Last name: </b>"+req.body.firstLastName+"<br>"
+//                  +"<b>Phone number: </b>"+req.body.phoneNumber+"<br>"
+//                  +"<b>Email: </b>"+req.body.email+"<br>"
+//                  +"<b>Cookie Design: </b>"+req.body.cookieDesign+"<br>"
+//                  +"<b>Quantity: </b>"+req.body.quantity+"<br>"
+//                  +"<b>Message on sticker: </b>"+req.body.messageOnSticker+"<br>"
+//                  +"<b>Order date: </b>"+req.body.orderDate+"<br>"
+//                  +"<b>Date needed: </b>"+req.body.dateNeeded+"<br>"
+//                  +"<b>Shipping Address: </b>"+req.body.shippingAddress+"<br>"
+//         }
+//         smtpTransport.sendMail(mailOptions, function(error, response){
+//         if(error){
+//              res.send("Email could not sent due to error: "+error);
+//         }else{
+//              res.send("Email has been sent successfully");
+//         } 
+//     }); 
 });
  
 // Starting server

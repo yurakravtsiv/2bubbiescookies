@@ -78,6 +78,7 @@ $(function () {
         $( ".fileName" ).text('Browse...');
         $( "#orderDate" ).val(todayDate());
         localStorage.removeItem("cookieDesign");
+        $("#msg").text("");
     });
     
 

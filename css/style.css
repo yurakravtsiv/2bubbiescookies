@@ -747,12 +747,26 @@ form .footer {
     
     .navbar-default .navbar-brand {
         display: block;
-        padding: 2px 5px;
+        padding: 0 0 0 10px;
     }
     
+    .logo-text {
+        font-family: 'Schoolbell', cursive;
+        font-size: 24px;
+        line-height: 50px;
+        color: #1e3245; 
+    /*    color: #76bdd#1e3245d; */
+    }
+
+    .blue-text {
+        color: #76bddd; 
+}
+    
+/*
     .navbar-default .navbar-brand>img {
         width: 40px;
     }
+*/
     
     .logo {
         display: none;

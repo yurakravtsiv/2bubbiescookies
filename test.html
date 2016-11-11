@@ -116,15 +116,12 @@
     </div>
     <div class="container">
         <div class="col-md-12">
-            <form action= "send.php" method= "POST"> 
- 
-<p>Имя: </p><p> <input type= "text" name= "name"> </p> 
- 
-<p>E-mail: </p><p> <input type= "text" name= "email"></p> 
- 
-<p>Сообщение: </p><p> <textarea rows= "10" cols= "45" name= "message"></textarea></p> 
- 
-<input type= "submit" value= "Отправить"> 
+            <form action="send.php" method="post">
+                First Name: <input type="text" name="first_name"><br>
+                Last Name: <input type="text" name="last_name"><br>
+                Email: <input type="text" name="email"><br>
+                Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+                <input type="submit" name="submit" value="Submit">
             </form>
         </div>
     </div>

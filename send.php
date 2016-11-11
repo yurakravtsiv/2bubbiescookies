@@ -1,96 +1,19 @@
-<? 
-// ----------------------------конфигурация-------------------------- // 
- 
-$adminemail="yura.kravtsiv@gmail.com";  // e-mail админа 
- 
- 
-$date=date("d.m.y"); // число.месяц.год 
- 
-$time=date("H:i"); // часы:минуты:секунды 
- 
-$backurl="http://site.ru/index.html";  // На какую страничку переходит после отправки письма 
- 
-//---------------------------------------------------------------------- // 
- 
-  
- 
-// Принимаем данные с формы 
- 
-$name=$_POST['name']; 
- 
-$email=$_POST['email']; 
- 
-$msg=$_POST['message']; 
- 
-  
- 
-// Проверяем валидность e-mail 
- 
-if (!preg_match("|^([a-z0-9_\.\-]{1,20})@([a-z0-9\.\-]{1,20})\.([a-z]{2,4})|is", 
-strtolower($email))) 
- 
- { 
- 
-  echo 
-"<center>Вернитесь <a 
-href='javascript:history.back(1)'><B>назад</B></a>. Вы 
-указали неверные данные!"; 
- 
-  } 
- 
- else 
- 
- { 
- 
- 
-$msg=" 
- 
- 
-<p>Имя: $name</p> 
- 
- 
-<p>E-mail: $email</p> 
- 
- 
-<p>Сообщение: $msg</p> 
- 
- 
-"; 
- 
-  
- 
- // Отправляем письмо админу  
- 
-mail("$adminemail", "$date $time Сообщение 
-от $name", "$msg"); 
- 
-  
- 
-// Сохраняем в базу данных 
- 
-//$f = fopen("message.txt", "a+"); 
-// 
-//fwrite($f," \n $date $time Сообщение от $name"); 
-// 
-//fwrite($f,"\n $msg "); 
-// 
-//fwrite($f,"\n ---------------"); 
-// 
-//fclose($f); 
- 
-  
- 
-// Выводим сообщение пользователю 
- 
-print "<script language='Javascript'><!-- 
-function reload() {location = \"$backurl\"}; setTimeout('reload()', 6000); 
-//--></script> 
- 
-$msg 
- 
-<p>Сообщение отправлено! Подождите, сейчас вы будете перенаправлены на главную страницу...</p>";  
-exit; 
- 
- } 
- 
+<?php 
+if(isset($_POST['submit'])){
+    $to = "yura.kravtsiv@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
 ?>

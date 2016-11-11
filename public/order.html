@@ -121,7 +121,7 @@
                     <div class="form-title">
                         Order form
                     </div>
-                    <form>
+                    <form role="form" id="emailForm" method="post">
                       <div class="body">
                           <div class="inputLabel first">First and Last name</div>
                           <input type="text" id="firstLastName" name="firstLastName" placeholder="First and Last name">
@@ -148,8 +148,8 @@
                           <div class="inputLabel">Shipping Address</div>
                           <textarea type="text" id="shippingAddress" name="shippingAddress" placeholder="Address"></textarea>
                           <div class="inputLabel fileInputLabel">JPEG image if applicable</div>
-					      <input type="file" id="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-					      <label for="file"><span class="fileName">Browse...</span></label>
+                <input type="file" id="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                <label for="file"><span class="fileName">Browse...</span></label>
                       </div>
                       <div class="footer">
                           <div class="row form-btns-container">
@@ -157,8 +157,9 @@
                                   <button id="cancelBtn" value="Cancel">Cancel</button>
                               </div>
                               <div class="col-sm-6">
-                                  <input id="sendBtn" type="submit" value="Send">
+                                  <button id="sendBtn" value="Send" type='button'>Send</button>
                               </div>
+                              <p class="bg-info" id="msg"></p>
                           </div>
                       </div>
                     </form>
@@ -224,7 +225,7 @@
         </div>
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js"   integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="   crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" defer></script>
     <script src="js/custom-file-input.js" defer></script>

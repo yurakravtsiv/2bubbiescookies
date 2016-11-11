@@ -24,19 +24,19 @@ app.post('/send', function(req, res){
 // }
 // Sending Email Without SMTP
 nodemailer.mail({
-    from: "2bubbiescookies ✔ <2bubbiescookies.sender@gmail.com>", // sender address
+    from: "2bubbiescookies <2bubbiescookies.sender@gmail.com>", // sender address
     to: "yuriy.kravtsiv@lasoft.org", // list of receivers
     subject: "Order ✔", // Subject line
     //text: "Hello world ✔", // plaintext body
-    html: "<b>"+req.body.firstLastName+"</b>"+"<br>"
-          +"<b>"+req.body.phoneNumber+"</b>"+"<br>"
-          +"<b>"+req.body.email+"</b>"+"<br>"
-          +"<b>"+req.body.cookieDesign+"</b>"+"<br>"
-          +"<b>"+req.body.quantity+"</b>"+"<br>"
-          +"<b>"+req.body.messageOnSticker+"</b>"+"<br>"
-          +"<b>"+req.body.orderDate+"</b>"+"<br>"
-          +"<b>"+req.body.dateNeeded+"</b>"+"<br>"
-          +"<b>"+req.body.shippingAddress+"</b>"+"<br>"
+    html: "<b>First and Last name: </b>"+req.body.firstLastName+"<br>"
+          +"<b>Phone number: </b>"+req.body.phoneNumber+"<br>"
+          +"<b>Email: </b>"+req.body.email+"<br>"
+          +"<b>Cookie Design: </b>"+req.body.cookieDesign+"<br>"
+          +"<b>Quantity: </b>"+req.body.quantity+"<br>"
+          +"<b>Message on sticker: </b>"+req.body.messageOnSticker+"<br>"
+          +"<b>Order date: </b>"+req.body.orderDate+"<br>"
+          +"<b>Date needed: </b>"+req.body.dateNeeded+"<br>"
+          +"<b>Shipping Address: </b>"+req.body.shippingAddress+"<br>"
     // ,attachments:[
     //   {
     //     streamSource: fs.createReadStream(req.files.file.path)

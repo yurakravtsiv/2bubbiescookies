@@ -681,6 +681,12 @@ form .footer {
     padding: 8px 15px;
 }
 
+#msg {
+    padding: 0 15px;
+    color: #76bddd;
+    text-align: center;
+}
+
 /************************** MEDIA QUERIES *****************************/
 
 @media screen and (max-width: 1200px) {

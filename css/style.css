@@ -739,7 +739,9 @@ form .footer {
     
     nav>.container-fluid,
     .container-fluid>.navbar-header,
-    .navbar-default .navbar-collapse {
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-toggle:focus, 
+    .navbar-default .navbar-toggle:hover {
         background-color: #f7faff;
     }
     
@@ -860,7 +862,8 @@ form .footer {
         padding: 10px;
     }
     
-    .main-about-container ul li.last {
+    .main-about-container ul li.last,
+    .main-portfolio-container {
         margin-bottom: 20px;
     }
     
@@ -877,7 +880,8 @@ form .footer {
         width: 16%;
     }
     
-    .testimonials-title {
+    .testimonials-title,
+    .portfolio-title {
         margin-top: 10px;
         margin-bottom: 10px;
     }

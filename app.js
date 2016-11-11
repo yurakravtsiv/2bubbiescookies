@@ -17,12 +17,14 @@ app.get('/',function(req,res){
 });
  
 // sending mail function
-app.post('/send', function(req, res){
+app.post('/send', function(req, res, data){
 // if(req.body.email == "" || req.body.subject == "") {
 //   res.send("Error: Email & Subject should not blank");
 //   return false;
 // }
 // Sending Email Without SMTP
+    
+
 nodemailer.mail({
     from: "2bubbiescookies <2bubbiescookies.sender@gmail.com>", // sender address
     to: "yuriy.kravtsiv@lasoft.org", // list of receivers
@@ -37,11 +39,6 @@ nodemailer.mail({
           +"<b>Order date: </b>"+req.body.orderDate+"<br>"
           +"<b>Date needed: </b>"+req.body.dateNeeded+"<br>"
           +"<b>Shipping Address: </b>"+req.body.shippingAddress+"<br>"
-//     ,attachments:[
-//       {
-//         streamSource: fs.createReadStream(req.files.file.path)
-//       }
-//     ]
 });
 res.send("Email has been sent successfully");
  

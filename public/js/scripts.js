@@ -72,6 +72,8 @@ $(function () {
         localStorage.removeItem("cookieDesign");
     });
     
+    var form = $("#emailForm");
+    
     $( "#cancelBtn" ).click(function(e) {
         e.preventDefault();
         $( "input" ).val('');
@@ -80,20 +82,20 @@ $(function () {
         $( "#orderDate" ).val(todayDate());
         localStorage.removeItem("cookieDesign");
         $("#msg").text("");
+        form.find('input,textarea').css('border-color', '#76bddd');
     });
-    
 
     var fullUrl =  location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
-    var form = $("#emailForm");
     
     $("#sendBtn").click(function(e){     
       if (validateForm(form) != false ) {
+        
         var formData = $("#emailForm").serialize();
         // var formData = new FormData();
         // formData.append('firstLastName', $( '#firstLastName' ).val());
         // formData.append('file', $( '#file' )[0].files[0]);
          // debugger;
-
+        
         $("#msg").text("Email sending Please wait..");
                   $.ajax({
                   url: fullUrl+'/send',
@@ -189,7 +191,9 @@ function validateForm(form) {
         form.find('#shippingAddress').css('border-color', 'red');
     } 
 
-    if( form.find('input').css('border-color') == 'rgb(255, 0, 0)' ) {
+    if( form.find('input,textarea').css('border-color') == 'rgb(255, 0, 0)' ) {
+//        form.find('#msg').text('Some incorrect data');
+//        form.find('#msg').css('color', 'red');
         return false;
     }
 }

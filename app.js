@@ -23,9 +23,13 @@ app.post('/send', function(req, res, data){
 //   return false;
 // }
 // Sending Email Without SMTP
-    
 
-nodemailer.mail({
+console.log(req.body);
+console.log("==========================================");
+console.log(req.files);
+    
+var transporter = nodemailer.createTransport();
+transporter.sendMail({
     from: "2bubbiescookies <2bubbiescookies.sender@gmail.com>", // sender address
     to: "yuriy.kravtsiv@lasoft.org", // list of receivers
     subject: "Order ✔", // Subject line
@@ -39,6 +43,16 @@ nodemailer.mail({
           +"<b>Order date: </b>"+req.body.orderDate+"<br>"
           +"<b>Date needed: </b>"+req.body.dateNeeded+"<br>"
           +"<b>Shipping Address: </b>"+req.body.shippingAddress+"<br>"
+    // ,attachments: [
+    //     {   
+    //         filename: 'license.txt',
+    //         path: 'https://raw.github.com/nodemailer/nodemailer/master/LICENSE'
+    //     },
+    //     {
+    //         filename: 'image.jpg',
+    //         path: 'http://www.w3schools.com/css/trolltunga.jpg'
+    //     }
+    // ]
 });
 res.send("Email has been sent successfully");
  

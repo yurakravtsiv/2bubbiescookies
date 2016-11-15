@@ -121,7 +121,7 @@
                     <div class="form-title">
                         Order form
                     </div>
-                    <form role="form" id="emailForm" method="post">
+                    <form id="emailForm" action="/send" method="post" enctype="multipart/form-data">
                       <div class="body">
                           <div class="inputLabel first">First and Last name</div>
                           <input type="text" id="firstLastName" name="firstLastName" placeholder="First and Last name">
@@ -132,7 +132,7 @@
                           <div class="inputLabel">Cookie Design</div>
                           <input type="text" id="cookieDesign" name="cookieDesign" placeholder="Cookie Design">
                           <div class="inputLabel">Quantity</div>
-                          <input type="number" id="quantity" name="quantity" placeholder="Quantity" min="1">
+                          <input type="number" id="quantity" name="quantity" placeholder="Quantity" min="1" value="1">
                           <div class="inputLabel">Message on sticker</div>
                           <input type="text" id="messageOnSticker" name="messageOnSticker" placeholder="Message on sticker">
                           <div class="row date-container">
@@ -150,6 +150,7 @@
                           <div class="inputLabel fileInputLabel">JPEG image if applicable</div>
                         <input type="file" id="file" name="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                         <label for="file"><span class="fileName">Browse...</span></label>
+                        <!-- <input type="file" id="image" name="iamge"/> -->
                       </div>
                       <div class="footer">
                           <div class="row form-btns-container">

@@ -84,17 +84,42 @@ $(function () {
         $("#msg").text("");
         form.find('input,textarea').css('border-color', '#76bddd');
     });
+    
+    var fileString;
+    
+    var handleFileSelect = function(evt) {
+        var files = evt.target.files;
+        var file = files[0];
+
+        if (files && file) {
+            var reader = new FileReader();
+
+            reader.onload = function(readerEvt) {
+                var binaryString = readerEvt.target.result;
+                fileString = btoa(binaryString);
+            };
+
+            reader.readAsBinaryString(file);
+        }
+    };
+
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+        document.getElementById('file').addEventListener('change', handleFileSelect, false);
+    } else {
+        alert('The File APIs are not fully supported in this browser.');
+    }
+    
+    
 
     var fullUrl =  location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
     
     $("#sendBtn").click(function(e){     
-      if (validateForm(form) != false ) {
+      if (validateForm(form) != false ) { 
         
         var formData = $("#emailForm").serialize();
-        // var formData = new FormData();
-        // formData.append('firstLastName', $( '#firstLastName' ).val());
-        // formData.append('file', $( '#file' )[0].files[0]);
-         // debugger;
+        var fileName = $( '#file' )[0].files[0].name;
+        var formDataFileAppendix = '&fileName=' + fileName + '&file=' + fileString;
+        formData = formData + formDataFileAppendix;
         
         $("#msg").text("Email sending Please wait..");
                   $.ajax({
@@ -108,9 +133,7 @@ $(function () {
                                    $("#msg").empty().text("There is some error to send email, Error code:"+e.status +", Error message:"+e.statusText);
                          },
                   dataType: "html",
-                  timeout: 60000,
-                  // processData: false,
-                  // contentType: false
+                  timeout: 60000
               });
       }
       return false;

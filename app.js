@@ -6,9 +6,10 @@ var app=express();
 var path = require('path')
 app.use(express.static(path.join(__dirname, 'public')));
 var port = Number(process.env.PORT || 5000);
-app.use(bodyParser.json()); // to support JSON-encoded bodies
+app.use(bodyParser.json({limit: '50mb'})); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({
-  extended: true
+  extended: true,
+  limit: '50mb'
 }));
  
 // Home page
@@ -18,22 +19,18 @@ app.get('/',function(req,res){
  
 // sending mail function
 app.post('/send', function(req, res, data){
-// if(req.body.email == "" || req.body.subject == "") {
-//   res.send("Error: Email & Subject should not blank");
-//   return false;
-// }
+
 // Sending Email Without SMTP
 
-console.log(req.body);
-console.log("==========================================");
-console.log(req.files);
+var fileString = req.body.file;
+fileString = fileString.replace(/\s/g, '+')
+
     
 var transporter = nodemailer.createTransport();
 transporter.sendMail({
-    from: "2bubbiescookies <2bubbiescookies.sender@gmail.com>", // sender address
-    to: "yuriy.kravtsiv@lasoft.org", // list of receivers
-    subject: "Order ✔", // Subject line
-    //text: "Hello world ✔", // plaintext body
+    from: "2bubbiescookies <2bubbiescookies.sender@gmail.com>", 
+    to: "yuriy.kravtsiv@lasoft.org", 
+    subject: "Order ✔", 
     html: "<b>First and Last name: </b>"+req.body.firstLastName+"<br>"
           +"<b>Phone number: </b>"+req.body.phoneNumber+"<br>"
           +"<b>Email: </b>"+req.body.email+"<br>"
@@ -42,17 +39,14 @@ transporter.sendMail({
           +"<b>Message on sticker: </b>"+req.body.messageOnSticker+"<br>"
           +"<b>Order date: </b>"+req.body.orderDate+"<br>"
           +"<b>Date needed: </b>"+req.body.dateNeeded+"<br>"
-          +"<b>Shipping Address: </b>"+req.body.shippingAddress+"<br>"
-    // ,attachments: [
-    //     {   
-    //         filename: 'license.txt',
-    //         path: 'https://raw.github.com/nodemailer/nodemailer/master/LICENSE'
-    //     },
-    //     {
-    //         filename: 'image.jpg',
-    //         path: 'http://www.w3schools.com/css/trolltunga.jpg'
-    //     }
-    // ]
+          +"<b>Shipping Address: </b>"+req.body.shippingAddress+"<br>",
+    attachments: [
+         {   
+            filename: req.body.fileName,
+            content: fileString,
+            encoding: 'base64'
+         }
+     ]
 });
 res.send("Email has been sent successfully");
  

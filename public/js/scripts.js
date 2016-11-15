@@ -190,11 +190,21 @@ function validateForm(form) {
     else {
         form.find('#shippingAddress').css('border-color', 'red');
     } 
-
-    if( form.find('input,textarea').css('border-color') == 'rgb(255, 0, 0)' ) {
-//        form.find('#msg').text('Some incorrect data');
-//        form.find('#msg').css('color', 'red');
-        return false;
+    
+    var temp = 0;
+    for ( var i = 0; i < form.find('input,textarea').length; i++ ) 
+    {
+        var el = '#' + form.find('input,textarea')[i].id;
+        if( form.find(el).css('border-color') == 'rgb(255, 0, 0)' ) {
+            ++temp;
+            $('#msg').css('color', 'red');
+            $('#msg').text('Incorrect data');
+            return false;
+        }
+    }
+    if (temp == 0) {
+        $('#msg').text('');
+        $('#msg').css('color', '#76bddd');
     }
 }
 

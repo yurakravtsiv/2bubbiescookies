@@ -1,4 +1,29 @@
 $(function () {
+    
+    var form = $("#emailForm");
+    var fileString;
+    var fullUrl =  location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
+    
+    // Slick init
+    $('.slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000
+      });
+        
+    function setSlickArrowPos() {
+        var sliderHeight = $( '.slider' ).height() / 2 + 'px';
+        $( '.slick-arrow' ).css('top', sliderHeight);    
+    }
+    setSlickArrowPos();
+    $( window ).resize(function() {
+      setSlickArrowPos();
+    });
+    
+    
+    // Menu links hover and select
     $( ".menu-link-item" )
       .mouseover(function() {
         $( this ).addClass('active');
@@ -23,6 +48,7 @@ $(function () {
 //        $( this ).find('.item-title-text').show();
 //      });
     
+    // Portfolio card show order button
     $( ".portfolio-card" )
       .mouseover(function() {
         $( this ).find('.price').hide();
@@ -39,41 +65,18 @@ $(function () {
         window.location.href = 'order.html';
       });
     
-    $(document).ready(function(){
-      $('.slider').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000
-      });
-        
-        function setSlickArrowPos() {
-            var sliderHeight = $( '.slider' ).height() / 2 + 'px';
-            $( '.slick-arrow' ).css('top', sliderHeight);    
-        }
-        setSlickArrowPos();
-        $( window ).resize(function() {
-          setSlickArrowPos();
-        });
-    });
-    
+    // Portfolio menu select item
     $( ".portfolio-menu li" )
       .click(function() {
         $( this ).parent().find('.current').removeClass('current');
         $( this ).addClass('current');
       });
     
+    //Filling form fields
     $( "#cookieDesign" ).val(localStorage.getItem("cookieDesign"));
-    
     $( "#orderDate" ).val(todayDate());
     
-    $( ".menu-link-item" ).click(function() {
-        localStorage.removeItem("cookieDesign");
-    });
-    
-    var form = $("#emailForm");
-    
+    //Cleanning form fields
     $( "#cancelBtn" ).click(function(e) {
         e.preventDefault();
         $( "input" ).val('');
@@ -85,8 +88,11 @@ $(function () {
         form.find('input,textarea').css('border-color', '#76bddd');
     });
     
-    var fileString;
-    
+    $( ".menu-link-item" ).click(function() {
+        localStorage.removeItem("cookieDesign");
+    });
+     
+    //File to base64
     var handleFileSelect = function(evt) {
         var files = evt.target.files;
         var file = files[0];
@@ -109,10 +115,7 @@ $(function () {
         alert('The File APIs are not fully supported in this browser.');
     }
     
-    
-
-    var fullUrl =  location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
-    
+    //Send form
     $("#sendBtn").click(function(e){     
       if (validateForm(form) != false ) { 
         

@@ -662,14 +662,6 @@ form .footer {
     padding: 8px 15px;
 }
 
-/*
-.form #cancelBtn:hover {
-    padding: 6px 15px;
-    border-width: 3px;
-    font-size: 19px;
-}
-*/
-
 .form #sendBtn {
     font-family: 'Delius', cursive;
     font-size: 18px;
@@ -767,18 +759,11 @@ form .footer {
         font-size: 24px;
         line-height: 50px;
         color: #1e3245; 
-    /*    color: #76bdd#1e3245d; */
     }
 
     .blue-text {
         color: #76bddd; 
 }
-    
-/*
-    .navbar-default .navbar-brand>img {
-        width: 40px;
-    }
-*/
     
     .logo {
         display: none;

@@ -55,6 +55,8 @@ $(function () {
             'use strict'; //satisfy code inspectors
             $( this ).find('.price').hide();
             $( this ).find('.button').show();
+            $( this ).parent().parent().find('.portfolio-card').not(this).find('.button').hide();
+            $( this ).parent().parent().find('.portfolio-card').not(this).find('.price').show();
         });
     }
     else{

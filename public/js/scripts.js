@@ -30,23 +30,7 @@ $(function () {
       })
       .mouseout(function() {
         $( this ).removeClass('active');
-      })
-//      .click(function() {
-//        $( this ).parent().parent().find('.current').removeClass('current');
-//        $( this ).addClass('current');
-//      });
-    
-//    $( ".portfolio-item" )
-//      .mouseover(function() {
-//        $( this ).find('.item-title-text').hide();
-//        $( this ).find('.item-title img').hide();
-//        $( this ).find('.button').show();
-//      })
-//      .mouseout(function() {
-//        $( this ).find('.button').hide();
-//        $( this ).find('.item-title img').show();
-//        $( this ).find('.item-title-text').show();
-//      });
+      });
     
     // Portfolio card show order button
     $( ".portfolio-card" )
@@ -65,7 +49,7 @@ $(function () {
         window.location.href = 'order.html';
       });
     
-    // Portfolio menu select item
+    // Go to portfolio
     $( ".portfolio-item" )
       .click(function() {
         var category = $( this ).find('.item-title-text').text();

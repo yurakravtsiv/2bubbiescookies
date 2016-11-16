@@ -32,6 +32,19 @@ $(function () {
 //        $( this ).removeClass('active');
 //      });
     
+    $('.menu-link-item').on('touchstart', function (e) {
+    'use strict'; //satisfy code inspectors
+    var link = $(this); //preselect the link
+    if (link.hasClass('active')) {
+        return true;
+    } else {
+        link.addClass('active');
+        $('.menu-link-item').not(this).removeClass('active');
+        e.preventDefault();
+        return false; //extra, and to make sure the function has consistent return points
+    }
+});
+    
     // Portfolio card show order button
     $( ".portfolio-card" )
       .mouseover(function() {

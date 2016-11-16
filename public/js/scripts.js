@@ -79,11 +79,8 @@ $(function () {
     // Go to portfolio
     $( ".portfolio-item" )
       .click(function() {
-        alert('a');
         var category = $( this ).find('.item-title-text').text();
-        alert('b');
         localStorage.setItem("portfolioItemCategory", category);
-        alert('c');
         window.location.href = 'portfolio.html';
       });
     

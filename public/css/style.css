@@ -738,6 +738,11 @@ form .footer {
 }
 
 @media screen and (max-width: 767px) {
+    
+    .header-container {
+        max-height: 294px !important; 
+    }
+    
     .header {
         padding: 0;
     }

@@ -42,7 +42,8 @@ $(function () {
             } else {
                 link.addClass('active');
                 $('.menu-link-item').not(this).removeClass('active');
-                e.preventDefault();
+//                e.preventDefault();
+                window.location.href = this.href;
                 return false; //extra, and to make sure the function has consistent return points
             }
         });
@@ -50,13 +51,13 @@ $(function () {
     else{
         $( ".menu-link-item" ).hover(
           function() {
+//              debugger;
             $( this ).addClass('active');
           }, function() {
             $( this ).removeClass('active');
           }
         );
     }
-    
     
     // Portfolio card show order button
     $( ".portfolio-card" )

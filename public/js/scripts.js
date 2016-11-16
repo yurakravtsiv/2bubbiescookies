@@ -29,6 +29,7 @@ $(function () {
             var link = $(this); //preselect the link
             if (link.hasClass('active')) {
                 return true;
+                e.preventDefault();
             } else {
                 link.addClass('active');
                 $('.menu-link-item').not(this).removeClass('active');

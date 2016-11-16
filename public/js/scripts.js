@@ -24,13 +24,13 @@ $(function () {
     
     
     // Menu links hover and select
-    $( ".menu-link-item" )
-      .mouseover(function() {
-        $( this ).addClass('active');
-      })
-      .mouseout(function() {
-        $( this ).removeClass('active');
-      });
+//    $( ".menu-link-item" )
+//      .mouseover(function() {
+//        $( this ).addClass('active');
+//      })
+//      .mouseout(function() {
+//        $( this ).removeClass('active');
+//      });
     
     // Portfolio card show order button
     $( ".portfolio-card" )

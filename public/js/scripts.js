@@ -49,16 +49,35 @@ $(function () {
         );
     }
     
-    // Portfolio card show order button
-    $( ".portfolio-card" )
-      .mouseover(function() {
-        $( this ).find('.price').hide();
-        $( this ).find('.button').show();
-      })
-      .mouseout(function() {
-        $( this ).find('.button').hide();
-        $( this ).find('.price').show();
-      });
+    // 
+    if(!!('ontouchstart' in window)){//check for touch device
+        $('.portfolio-card').on('click', function (e) {
+            'use strict'; //satisfy code inspectors
+            $( this ).find('.price').hide();
+            $( this ).find('.button').show();
+        });
+    }
+    else{
+         $( ".portfolio-card" ).hover(
+          function() {
+            $( this ).find('.price').hide();
+            $( this ).find('.button').show();
+          }, function() {
+            $( this ).find('.button').hide();
+            $( this ).find('.price').show();
+          }
+        );
+    }
+    
+//    $( ".portfolio-card" ).hover(
+//          function() {
+//            $( this ).find('.price').hide();
+//            $( this ).find('.button').show();
+//          }, function() {
+//            $( this ).find('.button').hide();
+//            $( this ).find('.price').show();
+//          }
+//        );
 
     $( ".portfolio-card .button" ).click(function() {
         var cookieDesign = $( this ).parent().siblings('.header').text();

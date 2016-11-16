@@ -42,8 +42,9 @@ $(function () {
             } else {
                 link.addClass('active');
                 $('.menu-link-item').not(this).removeClass('active');
+                $('.menu-link-item').not(this).removeClass('currents');
 //                e.preventDefault();
-                window.location.href = this.href;
+//                window.location.href = this.href;
                 return false; //extra, and to make sure the function has consistent return points
             }
         });

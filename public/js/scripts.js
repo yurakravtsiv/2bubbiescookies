@@ -31,10 +31,10 @@ $(function () {
       .mouseout(function() {
         $( this ).removeClass('active');
       })
-      .click(function() {
-        $( this ).parent().parent().find('.current').removeClass('current');
-        $( this ).addClass('current');
-      });
+//      .click(function() {
+//        $( this ).parent().parent().find('.current').removeClass('current');
+//        $( this ).addClass('current');
+//      });
     
 //    $( ".portfolio-item" )
 //      .mouseover(function() {

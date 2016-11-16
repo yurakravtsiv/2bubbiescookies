@@ -24,7 +24,7 @@ $(function () {
     
     //Header links hover and navigation
     if(!!('ontouchstart' in window)){//check for touch device
-        $('.menu-link-item').on('touchstart', function (e) {
+        $('.menu-link-item').on('click', function (e) {
             'use strict'; //satisfy code inspectors
             var link = $(this); //preselect the link
             if (link.hasClass('active')) {

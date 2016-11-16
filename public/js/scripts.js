@@ -81,8 +81,9 @@ $(function () {
       .click(function() {
         alert('a');
         var category = $( this ).find('.item-title-text').text();
-        localStorage.setItem("portfolioItemCategory", category);
         alert('b');
+        localStorage.setItem("portfolioItemCategory", category);
+        alert('c');
         window.location.href = 'portfolio.html';
       });
     

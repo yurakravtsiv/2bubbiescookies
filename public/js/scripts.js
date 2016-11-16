@@ -22,17 +22,7 @@ $(function () {
       setSlickArrowPos();
     });
     
-    
-    // Menu links hover and select
-//    $( ".menu-link-item" )
-//      .mouseover(function() {
-//        $( this ).addClass('active');
-//      })
-//      .mouseout(function() {
-//        $( this ).removeClass('active');
-//      });
-    
-    
+    //Header links hover and navigation
     if(!!('ontouchstart' in window)){//check for touch device
         $('.menu-link-item').on('touchstart', function (e) {
             'use strict'; //satisfy code inspectors
@@ -79,20 +69,21 @@ $(function () {
     $( ".portfolio-item" )
       .click(function() {
         var category = $( this ).find('.item-title-text').text();
+        localStorage.setItem("portfolioItemCategory", category);
         window.location.href = 'portfolio.html';
-        
-//        setTimeout(function() { 
-//            debugger;
-//            $( '.portfolio-menu li' ).parent().find('.current').removeClass('current');
-//            for ( var i = 0; i < $('.portfolio-menu').find('li').length; i++ ) 
-//            {
-//                debugger;
-//                if( $('.portfolio-menu').find('li')[i].innerHTML == category && $('.portfolio-menu').find('li')[i].innerText == category ) {
-//                    $('.portfolio-menu').find('li')[i].className = 'current';
-//                }
-//            }
-//        }, 1000);
       });
+    
+    // Set portfolio menu item
+    if( localStorage.getItem("portfolioItemCategory") ) {
+        $( '.portfolio-menu li' ).parent().find('.current').removeClass('current');
+        for ( var i = 0; i < $('.portfolio-menu').find('li').length; i++ ) 
+        {
+            if( $('.portfolio-menu').find('li')[i].innerHTML == localStorage.getItem("portfolioItemCategory") && $('.portfolio-menu').find('li')[i].innerText == localStorage.getItem("portfolioItemCategory") ) {
+                $('.portfolio-menu').find('li')[i].className = 'current';
+            }
+        }
+        localStorage.removeItem("portfolioItemCategory");
+    }
     
     // Portfolio menu select item
     $( ".portfolio-menu li" )

@@ -42,17 +42,15 @@ $(function () {
             } else {
                 link.addClass('active');
                 $('.menu-link-item').not(this).removeClass('active');
-                $('.menu-link-item').not(this).removeClass('currents');
-//                e.preventDefault();
-//                window.location.href = this.href;
-                return false; //extra, and to make sure the function has consistent return points
+                $('.menu-link-item').not(this).removeClass('current');
+                window.location.href = this.href;
+                return false;
             }
         });
     }
     else{
         $( ".menu-link-item" ).hover(
           function() {
-//              debugger;
             $( this ).addClass('active');
           }, function() {
             $( this ).removeClass('active');

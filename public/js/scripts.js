@@ -49,7 +49,7 @@ $(function () {
         );
     }
     
-    // 
+    // Order item
     if(!!('ontouchstart' in window)){//check for touch device
         $('.portfolio-card').on('click', function (e) {
             'use strict'; //satisfy code inspectors
@@ -70,17 +70,6 @@ $(function () {
           }
         );
     }
-    
-//    $( ".portfolio-card" ).hover(
-//          function() {
-//            $( this ).find('.price').hide();
-//            $( this ).find('.button').show();
-//          }, function() {
-//            $( this ).find('.button').hide();
-//            $( this ).find('.price').show();
-//          }
-//        );
-
     $( ".portfolio-card .button" ).click(function() {
         var cookieDesign = $( this ).parent().siblings('.header').text();
         localStorage.setItem("cookieDesign", cookieDesign);
@@ -90,8 +79,10 @@ $(function () {
     // Go to portfolio
     $( ".portfolio-item" )
       .click(function() {
+        alert('a');
         var category = $( this ).find('.item-title-text').text();
         localStorage.setItem("portfolioItemCategory", category);
+        alert('b');
         window.location.href = 'portfolio.html';
       });
     

@@ -66,6 +66,25 @@ $(function () {
       });
     
     // Portfolio menu select item
+    $( ".portfolio-item" )
+      .click(function() {
+        var category = $( this ).find('.item-title-text').text();
+        window.location.href = 'portfolio.html';
+        
+//        setTimeout(function() { 
+//            debugger;
+//            $( '.portfolio-menu li' ).parent().find('.current').removeClass('current');
+//            for ( var i = 0; i < $('.portfolio-menu').find('li').length; i++ ) 
+//            {
+//                debugger;
+//                if( $('.portfolio-menu').find('li')[i].innerHTML == category && $('.portfolio-menu').find('li')[i].innerText == category ) {
+//                    $('.portfolio-menu').find('li')[i].className = 'current';
+//                }
+//            }
+//        }, 1000);
+      });
+    
+    // Portfolio menu select item
     $( ".portfolio-menu li" )
       .click(function() {
         $( this ).parent().find('.current').removeClass('current');

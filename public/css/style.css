@@ -265,6 +265,11 @@ a.slide-order-btn:hover {
     padding: 6px 8px 15px 8px;
 }
 
+.portfolio-item:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.24);
+}
+
 .portfolio-item .item-img img {
     width: 100%;
 }

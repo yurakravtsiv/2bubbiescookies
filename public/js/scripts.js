@@ -32,18 +32,33 @@ $(function () {
 //        $( this ).removeClass('active');
 //      });
     
-    $('.menu-link-item').on('touchstart', function (e) {
-    'use strict'; //satisfy code inspectors
-    var link = $(this); //preselect the link
-    if (link.hasClass('active')) {
-        return true;
-    } else {
-        link.addClass('active');
-        $('.menu-link-item').not(this).removeClass('active');
-        e.preventDefault();
-        return false; //extra, and to make sure the function has consistent return points
+    
+    if(!!('ontouchstart' in window)){//check for touch device
+    //behaviour and events for touch device
     }
-});
+    else{
+        $( ".menu-link-item" ).hover(
+          function() {
+            $( this ).addClass('active');
+          }, function() {
+            $( this ).removeClass('active');
+          }
+        );
+    }
+    
+    
+//    $('.menu-link-item').on('touchstart', function (e) {
+//    'use strict'; //satisfy code inspectors
+//    var link = $(this); //preselect the link
+//    if (link.hasClass('active')) {
+//        return true;
+//    } else {
+//        link.addClass('active');
+//        $('.menu-link-item').not(this).removeClass('active');
+//        e.preventDefault();
+//        return false; //extra, and to make sure the function has consistent return points
+//    }
+//});
     
     // Portfolio card show order button
     $( ".portfolio-card" )

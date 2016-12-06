@@ -2,7 +2,7 @@ $(function () {
     
     var form = $("#emailForm");
     var fileString;
-    var fullUrl =  location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
+    var fullUrl =  location.href;
     
     // Slick init
     $('.slider').slick({
@@ -151,7 +151,9 @@ $(function () {
       if (validateForm(form) != false ) { 
         
         var formData = $("#emailForm").serialize();
-        var fileName = $( '#file' )[0].files[0].name;
+        if ($( '#file' )[0].files[0]) {
+            var fileName = $( '#file' )[0].files[0].name;
+        }
         var formDataFileAppendix = '&fileName=' + fileName + '&file=' + fileString;
         formData = formData + formDataFileAppendix;
         
@@ -162,6 +164,8 @@ $(function () {
                   data: formData,
                   success: function(result) {
                                    $("#msg").empty().text(result);
+                                   $("#emailForm input").val("");
+                                   $("#emailForm textarea").val("");
                            },
                   error: function(e) {
                                    $("#msg").empty().text("There is some error to send email, Error code:"+e.status +", Error message:"+e.statusText);

@@ -164,8 +164,7 @@ $(function () {
                   data: formData,
                   success: function(result) {
                                    $("#msg").empty().text(result);
-                                   $("#emailForm input").val("");
-                                   $("#emailForm textarea").val("");
+                                   setTimeout(function() { location.reload(); }, 2000);
                            },
                   error: function(e) {
                                    $("#msg").empty().text("There is some error to send email, Error code:"+e.status +", Error message:"+e.statusText);

@@ -73,7 +73,7 @@ $(function () {
     $( ".portfolio-card .button" ).click(function() {
         var cookieDesign = $( this ).parent().siblings('.header').text();
         localStorage.setItem("cookieDesign", cookieDesign);
-        window.location.href = 'order.html';
+        window.location.href = '/order';
       });
     
     // Go to portfolio
@@ -81,7 +81,7 @@ $(function () {
       .click(function() {
         var category = $( this ).find('.item-title-text').text();
         localStorage.setItem("portfolioItemCategory", category);
-        window.location.href = 'portfolio.html';
+        window.location.href = '/portfolio';
       });
     
     // Set portfolio menu item

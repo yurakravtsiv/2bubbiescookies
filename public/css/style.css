@@ -165,6 +165,10 @@ a.menu-link-item {
     margin-bottom: 0;
 }
 
+.testimonial-item-text {
+    margin-top: 20px;
+}
+
 a.slide-order-btn {
     display: inline-block;
     font-family: 'Delius', cursive;
@@ -425,7 +429,8 @@ a.slide-order-btn:hover {
     display: block;
     background-color: #ffffff;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.21);
-    padding: 35px 0 105px 0;
+    /* padding: 35px 0 105px 0; */
+    padding: 35px 0 90px 0;
     margin-bottom: 30px;
     border-left: solid 7px #9bd9f5;
 }
@@ -452,24 +457,34 @@ a.slide-order-btn:hover {
     bottom: -50px
 }
 
+.testimonial-item-header {
+    display: none;
+}
+
 .testimonial-item-photo {
     display: inline-block;
     margin-right: 35px;
     margin-bottom: 35px;
     vertical-align: bottom;
+    display: none;
 /*    border: solid 1px #704014;*/
 /*    border-radius: 50%;*/
 }
 
-.testimonial-item-name {
-    display: inline-block;
+.testimonial-item-name-container {
+    /* display: inline-block; */
     font-family: 'Delius', cursive;
     font-size: 30px;
     color: #1e3245;
     vertical-align: top;
+    text-align: right;
 }
 
-.testimonial-item-name span {
+.testimonial-item-name-container .testimonial-title {
+    display: none;
+}
+
+.testimonial-item-name-container span {
     display: inline-block;
     margin-top: 20px;
 }
@@ -489,6 +504,10 @@ a.slide-order-btn:hover {
     border-radius: 5px;
     list-style: none;
     padding: 10px 25px 10px 15px;
+}
+
+.portfolio-menu a {
+    text-decoration: none;
 }
 
 .portfolio-menu li {
@@ -914,12 +933,13 @@ form .footer {
         margin-right: 0;
     }
     
-    .testimonial-item-name span {
+    .testimonial-item-name-container span {
         margin-top: 0;
     }
     
     .testimonial-item-text {
-        margin-top: 20px;
+        /* margin-top: 20px; */
+        margin-top: 55px;
     }
     
     .form {
